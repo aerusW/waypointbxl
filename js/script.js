@@ -108,7 +108,10 @@
     ctx.fill();
   }
 
+  var safetyTimer = null;
+
   function hide() {
+    clearTimeout(safetyTimer);
     if (ctx) ctx.clearRect(0, 0, canvas.width, canvas.height);
     loader.style.display = 'none';
     loader.classList.remove('is-active');
@@ -121,14 +124,20 @@
     if (busy) return;
     busy = true;
 
-    // Show loader immediately so display:flex is applied before rAF starts
+    // Safety valve: if the rAF loop never completes (e.g. canvas error,
+    // background-tab throttling), force-reset after 3 s so the next tap works.
+    safetyTimer = setTimeout(function () {
+      if (!callback) { hide(); return; }
+      callback();
+      hide();
+    }, 3000);
+
     loader.style.display = 'flex';
     loader.classList.add('is-active');
     content.style.opacity   = '0';
     content.style.transform = 'translateY(20px)';
     if (chevron) chevron.classList.remove('is-drawn');
 
-    // Wait one frame so the browser applies the display change, then size the canvas
     requestAnimationFrame(function () {
       resizeCanvas();
       var maxR = maxRadius(ox, oy);
@@ -219,13 +228,20 @@
       var href   = el.getAttribute('href');
       var newTab = el.getAttribute('target') === '_blank';
       var o = originFromEl(el);
-      trigger(o.x, o.y, function () {
-        if (newTab) {
-          window.open(href, '_blank', 'noopener,noreferrer');
-        } else {
+
+      if (newTab) {
+        // Open a blank tab synchronously (direct from user gesture) so mobile
+        // popup blockers don't kill it, then navigate it from the callback.
+        var tab = window.open('', '_blank', 'noopener,noreferrer');
+        trigger(o.x, o.y, function () {
+          if (tab) { tab.location.href = href; }
+          else     { window.open(href, '_blank', 'noopener,noreferrer'); }
+        });
+      } else {
+        trigger(o.x, o.y, function () {
           window.location.href = href;
-        }
-      });
+        });
+      }
     });
   });
 })();
@@ -233,31 +249,23 @@
 
 /* ── Smooth scroll ──────────────────────────────────────────────── */
 (function () {
-  // Detect which element is actually scrolling (html or body)
-  function getScroller() {
-    var d = document.documentElement;
-    var prev = d.scrollTop;
-    d.scrollTop = prev + 1;
-    if (d.scrollTop !== prev) { d.scrollTop = prev; return d; }
-    return document.body;
-  }
-
   function easeInOutCubic(t) {
     return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
   }
 
-  function animateTo(scroller, to, duration) {
-    var from      = scroller.scrollTop;
-    var distance  = to - from;
+  // rAF-driven animation — bypasses CSS scroll-behavior and prefers-reduced-motion,
+  // so it works even when OS/browser animations are disabled.
+  // Uses the two-arg scrollTo(x, y) form which is always a synchronous position set.
+  function smoothScrollTo(targetY, duration) {
+    var startY    = window.scrollY;
+    var diff      = targetY - startY;
     var startTime = null;
-
     function step(ts) {
       if (!startTime) startTime = ts;
-      var progress = Math.min((ts - startTime) / duration, 1);
-      scroller.scrollTop = from + distance * easeInOutCubic(progress);
-      if (progress < 1) requestAnimationFrame(step);
+      var t = Math.min((ts - startTime) / duration, 1);
+      window.scrollTo(0, startY + diff * easeInOutCubic(t));
+      if (t < 1) requestAnimationFrame(step);
     }
-
     requestAnimationFrame(step);
   }
 
@@ -269,11 +277,9 @@
       if (!target) return;
       e.preventDefault();
 
-      var scroller = getScroller();
-      var navH     = (document.querySelector('.nav') || {}).offsetHeight || 0;
-      var top      = target.getBoundingClientRect().top + scroller.scrollTop - navH;
-
-      animateTo(scroller, top, 900);
+      var navH = (document.querySelector('.nav') || {}).offsetHeight || 0;
+      var top  = target.getBoundingClientRect().top + window.scrollY - navH;
+      smoothScrollTo(top, 700);
       history.pushState(null, '', '#' + id);
     });
   });
