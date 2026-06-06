@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Waypoint — Your first step into Europe</title>
+  <meta name="description" content="Waypoint is a Brussels-based youth non-profit helping students and student groups take part in Erasmus+ and EU youth mobility for the first time.">
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://waypointbxl.be/">
+  <meta property="og:title"       content="Waypoint — Your first step into Europe">
+  <meta property="og:description" content="Waypoint helps students and student groups take part in Erasmus+ and EU youth opportunities for the first time.">
+  <meta property="og:image"       content="assets/og-image.jpg">
+  <!-- REPLACE: og:image → drop a 1200×630px photo as img/og-image.jpg -->
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:site"        content="@waypointbxl">
+  <meta name="twitter:title"       content="Waypoint — Your first step into Europe">
+  <meta name="twitter:description" content="Waypoint helps students and student groups take part in Erasmus+ and EU youth opportunities for the first time.">
+  <meta name="twitter:image"       content="assets/og-image.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/logo-a.svg">
+  <!-- REPLACE: swap assets/favicon.svg with your real favicon -->
+
+  <link rel="canonical" href="https://waypointbxl.be/">
+
+  <!-- Google Fonts: Playfair Display (display serif) + DM Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Playfair+Display:ital,wght@0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ============================================================
+       NAV — fixed top bar
+       REPLACE: "W" text mark → your actual SVG logo
+  ============================================================ -->
+  <header class="nav" role="banner">
+    <nav class="nav__inner" aria-label="Main navigation">
+      <a href="#hero" class="nav__logo" aria-label="Waypoint — back to top">
+        <img src="assets/logo-a.svg" alt="Waypoint" class="nav__logo-img">
+      </a>
+
+      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav__links" id="nav-links" role="list">
+        <li><a href="#about"        class="nav__link">About</a></li>
+        <li><a href="#what-we-do"   class="nav__link">What we do</a></li>
+        <li><a href="#current-work" class="nav__link">Work</a></li>
+        <li><a href="#get-involved" class="nav__link">Get involved</a></li>
+        <li><a href="#contact"      class="nav__link nav__link--cta">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ============================================================
+         01 — HERO
+    ============================================================ -->
+    <section class="section section--hero" id="hero" aria-labelledby="hero-heading">
+
+      <!-- European capitals watermark — geographically arranged -->
+      <div class="hero__bg" aria-hidden="true">
+        <span class="hb"      style="--t:16%;--l:22%">Edinburgh</span>
+        <span class="hb hb--lg" style="--t:30%;--l:8%">Dublin</span>
+        <span class="hb"      style="--t:26%;--l:30%">Amsterdam</span>
+        <span class="hb hb--sm" style="--t:6%;--l:44%">Oslo</span>
+        <span class="hb"      style="--t:18%;--l:50%">Copenhagen</span>
+        <span class="hb"      style="--t:8%;--l:60%">Stockholm</span>
+        <span class="hb hb--sm" style="--t:12%;--l:74%">Helsinki</span>
+        <span class="hb hb--sm" style="--t:22%;--l:72%">Tallinn</span>
+        <span class="hb hb--sm" style="--t:30%;--l:70%">Riga</span>
+        <span class="hb hb--lg" style="--t:38%;--l:30%">Brussels</span>
+        <span class="hb"      style="--t:28%;--l:54%">Berlin</span>
+        <span class="hb hb--sm" style="--t:36%;--l:66%">Warsaw</span>
+        <span class="hb"      style="--t:46%;--l:24%">Paris</span>
+        <span class="hb hb--sm" style="--t:40%;--l:54%">Prague</span>
+        <span class="hb hb--sm" style="--t:46%;--l:60%">Vienna</span>
+        <span class="hb hb--sm" style="--t:50%;--l:36%">Bern</span>
+        <span class="hb hb--sm" style="--t:54%;--l:64%">Budapest</span>
+        <span class="hb"      style="--t:64%;--l:44%">Rome</span>
+        <span class="hb"      style="--t:66%;--l:14%">Madrid</span>
+        <span class="hb hb--sm" style="--t:74%;--l:6%">Lisbon</span>
+        <span class="hb hb--sm" style="--t:80%;--l:58%">Athens</span>
+      </div>
+
+      <div class="section__inner section__inner--hero">
+
+        <p class="eyebrow reveal">Brussels · Erasmus+ · Youth mobility</p>
+
+        <!-- REPLACE: headline copy if the brand evolves -->
+        <h1 class="hero__headline reveal reveal--delay-1" id="hero-heading">
+          <em>WAYPOINT</em>
+        </h1>
+
+        <p class="hero__tagline reveal reveal--delay-2">Your first step into <text style="color:blue">Europe</text>.</p>
+
+        <div class="hero__ctas reveal reveal--delay-3">
+          <a href="#about"   class="btn btn--primary">What we do</a>
+          <a href="#contact" class="btn btn--ghost">Get involved</a>
+        </div>
+
+      </div>
+
+      <!-- Scroll hint -->
+      <div class="hero__scroll-hint" aria-hidden="true">
+        <span class="hero__scroll-line"></span>
+        <span class="hero__scroll-label">Scroll</span>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         02 — ABOUT / MISSION
+    ============================================================ -->
+    <section class="section" id="about" aria-labelledby="about-heading">
+      <div class="section__inner">
+
+        <div class="section__marker reveal reveal--from-left" aria-hidden="true">02</div>
+
+        <div class="section__content">
+          <!-- REPLACE: headline copy -->
+          <h2 class="section__headline reveal" id="about-heading">
+            <em>The hardest<br>part is starting.</em>
+          </h2>
+
+          <div class="section__body reveal reveal--delay-1">
+            <!-- REPLACE: body copy -->
+            <p>Waypoint helps students and student groups take part in Erasmus+ and other EU youth opportunities for the first time. It exists to dismantle the "I don't understand how this works, so I won't even try" barrier — guiding newcomers through their first international project and making European mobility reachable for people who'd otherwise count themselves out.</p>
+          </div>
+
+          <dl class="metadata reveal reveal--delay-2">
+            <div class="metadata__item">
+              <dt>Based in</dt>
+              <dd>Brussels</dd>
+            </div>
+            <div class="metadata__item">
+              <dt>Focus</dt>
+              <dd>Erasmus+ youth exchanges</dd>
+            </div>
+            <div class="metadata__item">
+              <dt>For</dt>
+              <dd>First-timers &amp; newcomer organisations</dd>
+            </div>
+          </dl>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         03 — WHAT WE DO
+    ============================================================ -->
+    <section class="section section--tinted" id="what-we-do" aria-labelledby="what-we-do-heading">
+      <div class="section__inner">
+
+        <div class="section__marker reveal reveal--from-left" aria-hidden="true">03</div>
+
+        <div class="section__content">
+          <h2 class="section__headline reveal" id="what-we-do-heading">
+            <em>What we<br>do.</em>
+          </h2>
+
+          <div class="cards">
+
+            <article class="card reveal">
+              <span class="card__number" aria-hidden="true">i</span>
+              <h3 class="card__title">Demystify</h3>
+              <!-- REPLACE: card copy -->
+              <p class="card__body">Plain-language guidance and workshops on how Erasmus+ actually works — no jargon, no gatekeeping, no assumption of prior knowledge.</p>
+            </article>
+
+            <article class="card reveal reveal--delay-1">
+              <span class="card__number" aria-hidden="true">ii</span>
+              <h3 class="card__title">Mentor</h3>
+              <!-- REPLACE: card copy -->
+              <p class="card__body">We walk newcomer student groups through their first exchange from idea to implementation, end to end.</p>
+            </article>
+
+            <article class="card reveal reveal--delay-2">
+              <span class="card__number" aria-hidden="true">iii</span>
+              <h3 class="card__title">Connect</h3>
+              <!-- REPLACE: card copy -->
+              <p class="card__body">We build partnerships between student communities across Europe so no one has to start from zero.</p>
+            </article>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         04 — CURRENT WORK
+    ============================================================ -->
+    <section class="section" id="current-work" aria-labelledby="current-work-heading">
+      <div class="section__inner">
+
+        <div class="section__marker reveal reveal--from-left" aria-hidden="true">04</div>
+
+        <div class="section__content">
+          <h2 class="section__headline reveal" id="current-work-heading">
+            <em>Current<br>work.</em>
+          </h2>
+
+          <div class="work-cards">
+
+            <article class="work-card reveal reveal--delay-1">
+              <!-- REPLACE: set style="background-image:url('../img/brussels-dublin.jpg')" on the div below,
+                   drop an 800×500px photo as img/brussels-dublin.jpg -->
+              <div class="work-card__image" role="img" aria-label="Brussels and Dublin city landmarks"></div>
+              <div class="work-card__body">
+                <p class="work-card__tag">Upcoming · 2027</p>
+                <h3 class="work-card__title">TBD</h3>
+                <!-- REPLACE: project description -->
+                <p class="work-card__desc">A description of the upcoming project.</p>
+              </div>
+            </article>
+
+            <!-- ADD MORE WORK CARDS HERE — duplicate the <article class="work-card"> block above -->
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         05 — GET INVOLVED
+    ============================================================ -->
+    <section class="section section--tinted" id="get-involved" aria-labelledby="get-involved-heading">
+      <div class="section__inner">
+
+        <div class="section__marker reveal reveal--from-left" aria-hidden="true">05</div>
+
+        <div class="section__content">
+          <h2 class="section__headline reveal" id="get-involved-heading">
+            <em>Get<br>involved.</em>
+          </h2>
+
+          <div class="paths">
+
+            <article class="path reveal">
+              <h3 class="path__title">I'm a student</h3>
+              <!-- REPLACE: copy -->
+              <p class="path__body">Curious about an exchange but not sure you qualify or where to start? That's exactly who we're here for. Reach out and we'll talk you through it — no commitment, no form-filling, just a conversation.</p>
+              <a href="https://francescoserangeli.eu" class="btn btn--primary">Discover the founder</a>
+            </article>
+
+            <article class="path reveal reveal--delay-1">
+              <h3 class="path__title">We're a student organisation</h3>
+              <!-- REPLACE: copy -->
+              <p class="path__body">Want to run your first Erasmus+ project but don't know where to begin? We'll walk alongside you from idea to implementation — application, logistics, the lot.</p>
+              <a href="#contact" class="btn btn--primary">Get in touch</a>
+            </article>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         06 — CONTACT
+    ============================================================ -->
+    <section class="section" id="contact" aria-labelledby="contact-heading">
+      <div class="section__inner">
+
+        <div class="section__marker reveal reveal--from-left" aria-hidden="true">06</div>
+
+        <div class="section__content">
+          <h2 class="section__headline reveal" id="contact-heading">
+            <em>Talk<br>to us.</em>
+          </h2>
+
+          <div class="contact-links reveal reveal--delay-1">
+            <div class="contact-link">
+              <span class="contact-link__label">Email</span>
+              <span class="contact-link__value">
+                <a href="mailto:hello@waypointbxl.be">hello@waypointbxl.be</a>
+                <button class="copy-btn" data-copy="hello@waypointbxl.be" aria-label="Copy email address">
+                  <span class="copy-btn__icon">⎘</span>
+                  <span class="copy-btn__label">Copy</span>
+                </button>
+              </span>
+            </div>
+            <a href="https://instagram.com/waypointbxl" class="contact-link" target="_blank" rel="noopener noreferrer">
+              <span class="contact-link__label">Instagram</span>
+              <span class="contact-link__value">@waypointbxl</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__logos">
+      <a href="#hero" class="footer__logo-link" aria-label="Back to top">
+        <img src="assets/logo-a.svg" alt="Waypoint" class="footer__logo">
+      </a>
+    </div>
+    <div class="footer__inner">
+      <p class="footer__copy">© 2026 Waypoint — Brussels</p>
+      <a href="#hero" class="footer__back" aria-label="Back to top">↑ Top</a>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       PAGE LOADER
+  ============================================================ -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <canvas class="loader__canvas" id="loaderCanvas"></canvas>
+    <div class="loader__content" id="loaderContent">
+      <svg class="loader__pin" viewBox="0 0 108 108" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M54,86 C65,65 74,57 74,44 A20 20 0 1 0 34,44 C34,57 43,65 54,86 Z" fill="#FBF6EE"/>
+        <path class="loader__chevron" id="loaderChevron" d="M44,49 L54,39 L64,49"
+              fill="none" stroke="#FF6B4A" stroke-width="5"
+              stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="loader__wordmark">WAYPOINT</span>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108" role="img">
+  <title>Waypoint — logo concept B (navy W)</title>
+  <!-- Navy circle background -->
+  <circle cx="54" cy="54" r="54" fill="#22395C"/>
+  <!-- W-path in cream -->
+  <path d="M28,32 L42,78 L54,46 L66,78 L80,32" fill="none" stroke="#FBF6EE" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Orange accent dots at each W tip -->
+  <circle cx="28" cy="32" r="4.5" fill="#FF6B4A"/>
+  <circle cx="54" cy="46" r="4.5" fill="#FF6B4A"/>
+  <circle cx="80" cy="32" r="4.5" fill="#FF6B4A"/>
+</svg>
