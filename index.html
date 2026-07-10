@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Waypoint — Brussels Protest Tracker</title>
+  <meta name="description" content="Upcoming protests and demonstrations in Brussels — dates, times, places and sources, gathered in one agenda. A Waypoint project.">
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://waypointbxl.be/">
+  <meta property="og:title"       content="Waypoint — Brussels Protest Tracker">
+  <meta property="og:description" content="Upcoming protests and demonstrations in Brussels — dates, times, places and sources, gathered in one agenda.">
+  <meta property="og:image"       content="assets/og-image.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:site"        content="@waypointbxl">
+  <meta name="twitter:title"       content="Waypoint — Brussels Protest Tracker">
+  <meta name="twitter:description" content="Upcoming protests and demonstrations in Brussels — dates, times, places and sources, gathered in one agenda.">
+  <meta name="twitter:image"       content="assets/og-image.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/logo-a.svg">
+
+  <link rel="canonical" href="https://waypointbxl.be/">
+
+  <!-- Google Fonts: Playfair Display (display serif) + DM Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Playfair+Display:ital,wght@0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ============================================================
+       NAV — fixed top bar
+  ============================================================ -->
+  <header class="nav" role="banner">
+    <nav class="nav__inner" aria-label="Main navigation">
+      <a href="#hero" class="nav__logo" aria-label="Waypoint — back to top">
+        <img src="assets/logo-a.svg" alt="Waypoint" class="nav__logo-img">
+      </a>
+
+      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav__links" id="nav-links" role="list">
+        <li><a href="#agenda"  class="nav__link">Agenda</a></li>
+        <li><a href="#sources" class="nav__link">Sources</a></li>
+        <li><a href="#about"   class="nav__link">About</a></li>
+        <li><a href="#contact" class="nav__link nav__link--cta">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ============================================================
+         01 — HERO
+    ============================================================ -->
+    <section class="section section--hero" id="hero" aria-labelledby="hero-heading">
+
+      <!-- Brussels gathering places watermark -->
+      <div class="hero__bg" aria-hidden="true">
+        <span class="hb hb--lg" style="--t:18%;--l:26%">Bourse</span>
+        <span class="hb"      style="--t:10%;--l:52%">Gare du Nord</span>
+        <span class="hb hb--sm" style="--t:24%;--l:66%">Madou</span>
+        <span class="hb"      style="--t:30%;--l:44%">Gare Centrale</span>
+        <span class="hb hb--sm" style="--t:14%;--l:8%">Sainte-Catherine</span>
+        <span class="hb"      style="--t:40%;--l:64%">Schuman</span>
+        <span class="hb hb--sm" style="--t:36%;--l:12%">Mont des Arts</span>
+        <span class="hb"      style="--t:52%;--l:30%">Place du Trône</span>
+        <span class="hb hb--sm" style="--t:46%;--l:50%">Arts-Loi</span>
+        <span class="hb hb--sm" style="--t:58%;--l:70%">Cinquantenaire</span>
+        <span class="hb"      style="--t:64%;--l:14%">Place Poelaert</span>
+        <span class="hb hb--sm" style="--t:70%;--l:44%">Porte de Namur</span>
+        <span class="hb"      style="--t:78%;--l:60%">Place Luxembourg</span>
+        <span class="hb hb--sm" style="--t:80%;--l:24%">Flagey</span>
+        <span class="hb hb--sm" style="--t:6%;--l:34%">Rogier</span>
+      </div>
+
+      <div class="section__inner section__inner--hero">
+
+        <p class="eyebrow reveal">Brussels · Protests · Demonstrations</p>
+
+        <h1 class="hero__headline reveal reveal--delay-1" id="hero-heading">
+          <em>WAYPOINT</em>
+        </h1>
+
+        <p class="hero__tagline reveal reveal--delay-2">Know where the streets are heading.</p>
+
+        <div class="hero__ctas reveal reveal--delay-3">
+          <a href="#agenda"  class="btn btn--primary">See the agenda</a>
+          <a href="#about"   class="btn btn--ghost">About this project</a>
+        </div>
+
+      </div>
+
+      <!-- Scroll hint -->
+      <div class="hero__scroll-hint" aria-hidden="true">
+        <span class="hero__scroll-line"></span>
+        <span class="hero__scroll-label">Scroll</span>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         02 — AGENDA (the tracker)
+    ============================================================ -->
+    <section class="section" id="agenda" aria-labelledby="agenda-heading">
+      <div class="section__inner">
+
+        <div class="section__marker reveal reveal--from-left" aria-hidden="true">02</div>
+
+        <div class="section__content">
+          <h2 class="section__headline reveal" id="agenda-heading">
+            <em>What's<br>coming up.</em>
+          </h2>
+
+          <div class="section__body reveal reveal--delay-1">
+            <p>Upcoming protests and demonstrations in Brussels — dates, times, meeting points and organisers, with a source for every entry. Verify with the source before you go: plans move, routes change, things get cancelled.</p>
+          </div>
+
+          <div class="agenda-toggle reveal reveal--delay-2" role="tablist" aria-label="Agenda view">
+            <button id="btn-list" class="btn btn--ghost is-active" role="tab" aria-selected="true">List</button>
+            <button id="btn-calendar" class="btn btn--ghost" role="tab" aria-selected="false">Calendar</button>
+          </div>
+
+          <div id="list-view" aria-label="Upcoming events list"></div>
+
+          <div id="calendar-view" hidden aria-label="Calendar view">
+            <div class="cal-nav">
+              <button id="cal-prev" class="cal-nav__btn" aria-label="Previous month">&#8592;</button>
+              <h3 id="cal-title" class="cal-nav__title"></h3>
+              <button id="cal-next" class="cal-nav__btn" aria-label="Next month">&#8594;</button>
+            </div>
+            <div class="cal-grid" id="cal-grid"></div>
+            <div id="cal-day-events"></div>
+          </div>
+
+          <p class="agenda-updated" id="last-updated"></p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         03 — SOURCES
+    ============================================================ -->
+    <section class="section section--tinted" id="sources" aria-labelledby="sources-heading">
+      <div class="section__inner">
+
+        <div class="section__marker reveal reveal--from-left" aria-hidden="true">03</div>
+
+        <div class="section__content">
+          <h2 class="section__headline reveal" id="sources-heading">
+            <em>Where this<br>comes from.</em>
+          </h2>
+
+          <div class="section__body reveal reveal--delay-1">
+            <p>The agenda refreshes itself every day from the Démosphère feed, and is completed by hand from the other sources below. Nothing here is invented: every event links back to where it was announced.</p>
+          </div>
+
+          <div class="cards">
+
+            <article class="card reveal">
+              <span class="card__number" aria-hidden="true">i</span>
+              <h3 class="card__title">Démosphère Bruxelles</h3>
+              <p class="card__body">The city's activist agenda. Its public feed is pulled in automatically every morning, so recurring rallies and newly announced actions land here on their own.</p>
+              <a href="https://bxl.demosphere.net/" class="card__link" target="_blank" rel="noopener noreferrer">bxl.demosphere.net</a>
+            </article>
+
+            <article class="card reveal reveal--delay-1">
+              <span class="card__number" aria-hidden="true">ii</span>
+              <h3 class="card__title">YOUCA Protestagenda</h3>
+              <p class="card__body">A maintained list of protests and actions in Brussels and Flanders — added to the agenda by hand when relevant to Brussels.</p>
+              <a href="https://www.youca.be/doe-mee/protestagenda" class="card__link" target="_blank" rel="noopener noreferrer">youca.be</a>
+            </article>
+
+            <article class="card reveal reveal--delay-2">
+              <span class="card__number" aria-hidden="true">iii</span>
+              <h3 class="card__title">City of Brussels</h3>
+              <p class="card__body">Official protest &amp; traffic notices, published event by event. Also where you'll find the rules on demonstration permits.</p>
+              <a href="https://www.brussels.be/agenda" class="card__link" target="_blank" rel="noopener noreferrer">brussels.be</a>
+            </article>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         04 — ABOUT
+    ============================================================ -->
+    <section class="section" id="about" aria-labelledby="about-heading">
+      <div class="section__inner">
+
+        <div class="section__marker reveal reveal--from-left" aria-hidden="true">04</div>
+
+        <div class="section__content">
+          <h2 class="section__headline reveal" id="about-heading">
+            <em>The hardest<br>part is showing up.</em>
+          </h2>
+
+          <div class="section__body reveal reveal--delay-1">
+            <p>Waypoint is a Brussels-based youth non-profit built around one idea: the biggest barrier to taking part in anything — an exchange abroad, a civic life, a demonstration — is not knowing where to start. This tracker applies that idea to the streets of Brussels: one clear agenda, so "I didn't know it was happening" stops being the reason you weren't there.</p>
+            <p>Waypoint was founded and is run by Francesco Serangeli.</p>
+          </div>
+
+          <dl class="metadata reveal reveal--delay-2">
+            <div class="metadata__item">
+              <dt>Based in</dt>
+              <dd>Brussels</dd>
+            </div>
+            <div class="metadata__item">
+              <dt>Founder</dt>
+              <dd><a href="https://francescoserangeli.eu" target="_blank" rel="noopener noreferrer">Francesco Serangeli</a></dd>
+            </div>
+            <div class="metadata__item">
+              <dt>Project</dt>
+              <dd>Brussels Protest Tracker</dd>
+            </div>
+          </dl>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         05 — CONTACT
+    ============================================================ -->
+    <section class="section section--tinted" id="contact" aria-labelledby="contact-heading">
+      <div class="section__inner">
+
+        <div class="section__marker reveal reveal--from-left" aria-hidden="true">05</div>
+
+        <div class="section__content">
+          <h2 class="section__headline reveal" id="contact-heading">
+            <em>Missing<br>an event?</em>
+          </h2>
+
+          <div class="section__body reveal reveal--delay-1">
+            <p>Know of a demonstration that isn't listed? Send the date, meeting point and a link to the announcement.</p>
+          </div>
+
+          <div class="contact-links reveal reveal--delay-2">
+            <div class="contact-link">
+              <span class="contact-link__label">Email</span>
+              <span class="contact-link__value">
+                <a href="mailto:hello@waypointbxl.be">hello@waypointbxl.be</a>
+                <button class="copy-btn" data-copy="hello@waypointbxl.be" aria-label="Copy email address">
+                  <span class="copy-btn__icon">⎘</span>
+                  <span class="copy-btn__label">Copy</span>
+                </button>
+              </span>
+            </div>
+            <a href="https://instagram.com/waypointbxl" class="contact-link" target="_blank" rel="noopener noreferrer">
+              <span class="contact-link__label">Instagram</span>
+              <span class="contact-link__value">@waypointbxl</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__logos">
+      <a href="#hero" class="footer__logo-link" aria-label="Back to top">
+        <img src="assets/logo-a.svg" alt="Waypoint" class="footer__logo">
+      </a>
+    </div>
+    <div class="footer__inner">
+      <p class="footer__copy">© 2026 Waypoint — Brussels. Event data is gathered from public sources and may contain errors; always verify with the linked source.</p>
+      <a href="#hero" class="footer__back" aria-label="Back to top">↑ Top</a>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

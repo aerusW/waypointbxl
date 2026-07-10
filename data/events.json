@@ -1,0 +1,87 @@
+{
+  "meta": {
+    "lastUpdated": "2026-07-10",
+    "note": "Manually maintained. Add one-off events under 'events' and repeating ones under 'recurring'. See README.md for instructions.",
+    "sources": [
+      {
+        "name": "Démosphère Bruxelles",
+        "url": "https://bxl.demosphere.net/"
+      },
+      {
+        "name": "YOUCA Protestagenda",
+        "url": "https://www.youca.be/doe-mee/protestagenda"
+      },
+      {
+        "name": "City of Brussels protest & traffic notices",
+        "url": "https://www.brussels.be/agenda"
+      }
+    ]
+  },
+  "events": [
+    {
+      "id": "refugee-walk-2026",
+      "title": "Refugee Walk 2026",
+      "date": "2026-10-04",
+      "time": "",
+      "location": "Studio Citygate, Anderlecht",
+      "organizer": "Vluchtelingenwerk Vlaanderen",
+      "cause": "Refugee solidarity",
+      "source": "https://www.refugeewalk.be/",
+      "sourceName": "refugeewalk.be (via YOUCA Protestagenda)",
+      "notes": "Sponsored solidarity walk. Registration required."
+    },
+    {
+      "id": "klimaatmars-2026",
+      "title": "Klimaatmars / Marche pour le Climat",
+      "date": "2026-10-11",
+      "time": "",
+      "location": "Brussels (exact location to be announced)",
+      "organizer": "Klimaatcoalitie / Coalition Climat (with Amnesty International and others)",
+      "cause": "Climate",
+      "source": "https://www.amnesty-international.be/wat-we-doen/events/klimaatmars",
+      "sourceName": "Amnesty International (via YOUCA Protestagenda)",
+      "notes": "Details (time, meeting point) not yet announced as of 2026-07-10 — check source before attending."
+    }
+  ],
+  "recurring": [
+    {
+      "id": "gare-centrale-tuesdays",
+      "title": "Rassemblement : Contre le colonialisme, le fascisme, les guerres et génocides !",
+      "rule": { "freq": "weekly", "weekday": 2 },
+      "time": "18:00",
+      "location": "Gare Centrale / Centraal Station, Brussels",
+      "organizer": "See event page",
+      "cause": "Anti-colonialism / anti-fascism / anti-war",
+      "source": "https://bxl.demosphere.net/rv/18742",
+      "sourceName": "Démosphère Bruxelles",
+      "notes": "Weekly rally, every Tuesday. Listed on Démosphère through end of 2026.",
+      "until": "2026-12-29"
+    },
+    {
+      "id": "bourse-palestine-wednesdays",
+      "title": "Rassemblement : Back to la Bourse for Palestine !",
+      "rule": { "freq": "weekly", "weekday": 3 },
+      "time": "19:00",
+      "location": "La Bourse / Beurs, Brussels",
+      "organizer": "See event page",
+      "cause": "Palestine solidarity",
+      "source": "https://bxl.demosphere.net/rv/18780",
+      "sourceName": "Démosphère Bruxelles",
+      "notes": "Weekly rally, every Wednesday. YOUCA also lists a daily 19:00 Gaza protest at the Bourse — check sources for other days.",
+      "until": "2026-12-30"
+    },
+    {
+      "id": "critical-mass-bxl",
+      "title": "Critical Mass Brussels (protest bike ride)",
+      "rule": { "freq": "monthly-last-weekday", "weekday": 5 },
+      "time": "18:00",
+      "location": "Place du Trône / Troonplein, Brussels",
+      "organizer": "Critical Mass Brussels",
+      "cause": "Cycling / mobility",
+      "source": "https://www.youca.be/doe-mee/protestagenda",
+      "sourceName": "YOUCA Protestagenda",
+      "notes": "Last Friday of every month. YOUCA listed the next ride as '29 August' (a Saturday) — the last Friday of August 2026 is the 28th, so verify the exact date with the organizers.",
+      "until": "2026-12-25"
+    }
+  ]
+}
