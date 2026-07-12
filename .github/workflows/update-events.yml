@@ -1,26 +1,22 @@
 name: Update events from Démosphère
-
 on:
   schedule:
     - cron: "17 5 * * *" # daily at 05:17 UTC
   workflow_dispatch: {} # allows manual runs from the Actions tab
-
 permissions:
   contents: write
-
 jobs:
   update:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
+        with:
+          token: ${{ secrets.BOT_PAT }}
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
-
+          node-version: 20
       - name: Fetch feed and regenerate data/auto-events.json
         run: node scripts/update-events.js
-
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions[bot]"
